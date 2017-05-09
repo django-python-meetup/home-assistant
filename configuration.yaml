@@ -34,7 +34,7 @@ http:
 updater:
 
 # Discover some devices automatically
-discovery:
+#discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -46,25 +46,32 @@ history:
 logbook:
 
 # Track the sun
-sun:
+#sun:
 
 # Weather Prediction
-sensor:
-  platform: yr
+#sensor:
+#  platform: yr
 
 # Text to speech
-tts:
-  platform: google
+#tts:
+#  platform: google
 
 group: !include groups.yaml
 
 # Django Python Meetup example file switch
 switch:
   - platform: example
-    file_path: /tmp/switch1
+    file_path: /tmp/demo/switch1
   - platform: example
-    file_path: /tmp/switch2
+    file_path: /tmp/demo/switch2
+  - platform: arduino
+    pins:
+      9:
+        name: Desk Lamp
 
 xor_automation:
   entity_1: switch.switch1
-  entity_2: switch.switch2
+  entity_2: switch.desk_lamp
+
+arduino:
+  port: /dev/cu.usbmodem1451
