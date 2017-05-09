@@ -1,0 +1,16 @@
+# Editors
+.idea/
+
+# Logs
+*.log
+
+# Databases
+*.db
+
+# Installation specific stuff
+tts/
+deps/
+.uuid
+
+# python
+__pycache__
