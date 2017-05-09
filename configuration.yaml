@@ -64,3 +64,7 @@ switch:
     file_path: /tmp/switch1
   - platform: example
     file_path: /tmp/switch2
+
+xor_automation:
+  entity_1: switch.switch1
+  entity_2: switch.switch2
